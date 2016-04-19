@@ -58,7 +58,7 @@ elif test -f /usr/local/etc/bash_completion.d/git-completion.bash; then
 	source /usr/local/etc/bash_completion.d/git-prompt.sh
 fi
 
-# django bash completion 
+# django bash completion
 if test -f /$HOME/.django_bash_completion.sh; then
 	source $HOME/.django_bash_completion.sh
 fi
@@ -156,4 +156,9 @@ else
 	echo -e "${RED}node is behind LTS. please update to $LTS"
 	echo ""
     echo -e "   ${NONE}sudo n $LTS"
+fi
+export ABACUS_DEPLOYMENT_KEY=~/.ssh/drg-euw1-abacus-team.pem
+
+if [ -f ~/.sensiblebash ]; then
+    source ~/.sensiblebash
 fi
